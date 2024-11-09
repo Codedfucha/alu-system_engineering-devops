@@ -1,10 +1,7 @@
-#!/bin/env bash
-# Install Nginx and set up the server
-   
-# Update the package list
+#!/usr/bin/env bash
+
 apt-get update
 
-# Install Nginx without asking for confirmation
 apt-get install -y nginx
 
 # Make sure Nginx is listening on port 80
