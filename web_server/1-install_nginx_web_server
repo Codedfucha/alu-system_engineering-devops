@@ -1,0 +1,17 @@
+#!/bin/bash
+# Install Nginx and set up the server
+   
+# Update the package list
+apt-get update
+
+# Install Nginx without asking for confirmation
+apt-get install -y nginx
+
+# Make sure Nginx is listening on port 80
+ufw allow 'Nginx HTTP'
+
+# Check if Nginx is running
+service nginx start
+
+# Add an HTML page containing "Holberton School"
+echo "Holberton School for the win!" > /var/www/html/index.html
