@@ -6,6 +6,7 @@ apt-get install -y nginx
 
 # Make sure Nginx is listening on port 80
 ufw allow 'Nginx HTTP'
+ufw allow 'Open SSH'
 
 # Check if Nginx is running
 service nginx restart
