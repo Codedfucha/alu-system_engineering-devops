@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 # Install Nginx and set up the server
    
 # Update the package list
