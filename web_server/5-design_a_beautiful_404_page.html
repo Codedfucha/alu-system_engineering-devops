@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://via.placeholder.com/1200x800'); /* Add your own background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 6em;
+            margin: 0;
+            animation: bounce 1s infinite alternate;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .message {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ff6600;
+        }
+
+        .button {
+            padding: 15px 30px;
+            background-color: #ff6600;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #cc5200;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-30px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>404</h1>
+    <p>Oops! Looks like you've lost your way...</p>
+    <div class="message">Ceci n'est pas une page</div>
+    <a href="/" class="button">Go Back Home</a>
+
+</body>
+</html>
