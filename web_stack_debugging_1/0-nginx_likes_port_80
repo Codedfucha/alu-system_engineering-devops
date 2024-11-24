@@ -11,7 +11,7 @@ systemctl start nginx
 systemctl enable nginx
 
 # Ensure Nginx is listening on port 80
-sed -i 's/listen 80 default_server;/listen 80 default_server;\n    listen [::]:80 default_server;/' /etc/nginx/sites-available/default
+# sed -i 's/listen 80 default_server;/listen 80 default_server;\n    listen [::]:80 default_server;/' /etc/nginx/sites-available/default
 
 # Reload Nginx configuration
 nginx -t && systemctl reload nginx
