@@ -19,5 +19,5 @@ nginx -t && systemctl reload nginx
 # Allow port 80 through the firewall
 ufw allow 80/tcp > /dev/null 2>&1 || true
 
-# Test if Nginx is accessible on port 80
-curl -I 0:80
+# Test if Nginx is accessible on port 80 using localhost
+curl -I localhost:80 | head -n 1
