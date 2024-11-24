@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script starts Apache and serves a page with "Hello Holberton"
+
+# Update the package lists
+apt-get update
+
+# Install Apache if it's not installed
+apt-get install -y apache2
+
+# Create a simple HTML page with "Hello Holberton"
+echo "Hello Holberton" > /var/www/html/index.html
+
+# Start Apache in the background and ensure it's running
+service apache2 start
+
+# Ensure Apache keeps running (alternative: apache2ctl or apache2)
+apache2ctl -D FOREGROUND
+
