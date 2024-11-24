@@ -20,4 +20,10 @@ nginx -t && systemctl reload nginx
 ufw allow 80/tcp > /dev/null 2>&1 || true
 
 # Test if Nginx is accessible on port 80 using localhost
-curl -I localhost:80 | head -n 1
+if curl -I localhost:80 | head -n 1 | grep -q "HTTP/1.1 200 OK"; then
+    echo "2"  # Expected output if HTTP/200 is found
+    exit 0
+else
+    echo "0"  # Output if something went wrong
+    exit 1
+fi
