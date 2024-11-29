@@ -1,0 +1,1 @@
+This project involves creating a Bash script that demonstrates how to run a command as a different user. The script accepts a username as an argument and executes the whoami command under the context of the specified user.
