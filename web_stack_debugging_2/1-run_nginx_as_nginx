@@ -1,0 +1,21 @@
+#!/bin/bash
+# Ensure Nginx runs as nginx user and listens on port 8080
+
+# Update nginx.conf to set user to nginx
+sed -i 's/^user .*/user nginx;/' /etc/nginx/nginx.conf
+
+# Update default server block to listen on port 8080
+sed -i 's/listen .*/listen 8080;/' /etc/nginx/sites-available/default
+
+# Adjust permissions
+chown -R nginx:nginx /var/log/nginx
+chown -R nginx:nginx /var/lib/nginx
+chown -R nginx:nginx /var/www/html
+
+# Restart Nginx
+systemctl restart nginx
+
+# Verify
+echo "Verifying Nginx setup..."
+ps aux | grep nginx
+netstat -tuln | grep 8080
